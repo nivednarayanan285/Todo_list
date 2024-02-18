@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="headbar">
+<div>
+    <h1>Hello..{{ request.user|title }}</h1>
+    <h4>You have {{ count }} incomplete tasks</h4>
+</div>
+{% if request.user.is_authenticated %}
+    
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button class="logout-button"  type="submit">Logout</button>
+    </form>
+{% else %}
+    <a href="{% url 'login' %}">Login</a>
+{% endif %}
+</div>
+    <hr>
+    <div>
+        <a href="{% url 'taskcreate' %}"><button>Create</button></a>
+        
+    </div>
+    <form action="" method="get">
+        <input type="text" name="search">
+        <input type="submit" value="submit">
+        <input type="submit" value="refresh">
+
+    </form>
+    <table>
+        <tr>
+            <th>My todo list</th>
+        </tr>
+        {% for i in tasks %}
+        <tr>
+            <td>{{i.title}}</td>
+
+            <td><a class="ab" href="{% url 'taskupdate' i.id %}">Edit</a></td>
+            <td><a class="ab" href="{% url 'taskdelete' i.id %}">Delete</a></td>
+        </tr>
+
+        {% empty %}
+        <h2>No item in the list</h2>
+        {% endfor %}
+    
+    </table>
+{% endfor %}
+{% endblock content %}

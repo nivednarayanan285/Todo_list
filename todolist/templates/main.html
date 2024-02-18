@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totolist</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@1,6..12,200&display=swap" rel="stylesheet">
+<style>
+    body{
+        background-color:whitesmoke;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    h1,h2,h3,h4,h5,h6{
+        font-family: 'Lucida Sans', Verdana, sans-serif;
+        color: whitesmoke;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(66, 66, 59);
+    
+    }
+    .container{
+        max-width: 550px;
+        margin: auto;
+        background-color: rgb(143, 164, 182);
+        border-radius: 15px;
+        
+
+    }
+
+    .ab:hover{
+        color: blueviolet;
+        border: 0px solid blueviolet;
+        background-color:whitesmoke;
+
+    }
+
+    .headbar{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 5px 0px 5px;
+        background: linear-gradient(90deg, #f5a84a 0%,#eddd80 43%,#d0ed29 100%);
+        border-radius: 15px 15px 0px 0px;
+    }
+
+   .logout-button{
+    border: thin;
+    border-radius: 10px;
+   }
+    
+   .logout-button:hover{
+    background-color: aquamarine;
+    cursor: pointer;
+   }
+
+   .task-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px;
+   }
+
+   .task-title{
+    display: flex;
+   }
+
+   .task-title a{
+    margin-left: 10px;
+   }
+
+   .task-com-icon{
+    height: 20px;
+    width: 20px;
+    background-color: green;
+    border-radius: 50%;
+   }
+
+   .task-incom-icon{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 25, 0);
+    border-radius: 50%;
+   }
+
+   .dl{
+    color: rgb(223, 61, 61);
+    text-decoration: underline;
+    font-size: 22px;
+    font-weight: 900;
+   }
+
+   .a1{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+   }
+   
+   
+   .add{
+    height: 35px;
+    width: 110px;
+    border-radius: 20px;
+    border: 1px solid rgb(240, 238, 136);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+     
+}
+
+
+    input[type=text],
+    input[type=password],
+    textarea{
+        border: 1px solid rgb(240, 238, 136);
+        border-radius: 5px;
+        padding: 10px;
+        width: 90%;
+    }
+
+    .button{
+        border: 1px solid rgb(240, 238, 136);
+        background-color: blanchedalmond;
+        padding:10px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .back{
+        cursor: pointer;
+    }
+    label{
+        display: block;
+    
+    }
+    .delete-page{
+        padding: 10px;
+    }
+
+
+</style>
+<body>
+    <div class="container">
+        {% block content %}
+
+
+        {% endblock content %}
+    </div>
+    
+</body>
+</html>

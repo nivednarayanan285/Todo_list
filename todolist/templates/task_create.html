@@ -1,0 +1,18 @@
+
+{% extends 'main.html' %}
+{% block content %}
+ <div style="padding: 10px;" >
+    <div class="header-bar">
+    <a class="back" href="{% url 'tasklist' %}"><button class="button">&#8592Back</button></a></div>
+    <h1>New Task</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {{form.as_p}}
+        <input class="button" type="submit" value="submit">
+
+    </form>
+</div>
+    
+    
+{% endblock content %} 

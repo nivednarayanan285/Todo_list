@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="delete-page">
+    <a href="{% url 'tasklist' %}"><button>Go Back</button></a>
+  
+    <form action="" method="post">
+        {% csrf_token %}
+        <p style="font-family:'Times New Roman', Times, serif;">Are you sure you want to delete  '{{ tasks }}  ? '</p>
+         <input type="submit" value="delete">
+    </form>
+</div>
+{% endblock content %}

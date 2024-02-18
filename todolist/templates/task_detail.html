@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+{% block content %}
+<div >
+    <a class="button" href="{% url 'tasklist' %}"><button>Go Back</button></a>
+    <h1>tasks</h1>
+  <p>{{tasks.title}}</p>  
+  <p>{{tasks.description}}</p>
+</div>
+{% endblock content %}
